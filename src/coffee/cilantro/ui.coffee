@@ -17,6 +17,7 @@ define [
     './ui/workflows'
     './ui/paginator'
     './ui/notify'
+    './ui/pagination'
 ], ($, _, Backbone, c, mods...) ->
 
     $(document).ajaxError (event, xhr, settings, exception) ->

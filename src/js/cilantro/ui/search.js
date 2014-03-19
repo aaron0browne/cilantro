@@ -27,11 +27,12 @@ define([
             'keyup @ui.input': 'triggerSearch'
         },
 
-        initialize: function() {
+        constructor: function() {
+            Marionette.ItemView.prototype.constructor.apply(this, arguments);
+
             this._query = '';
 
             this.trggerSearch = _.debounce(this.triggerSearch, this.options.delay);
-
             // If a search method is supplied, bind it to the search event
             if (this.search) this.on('search', this.search);
         },
